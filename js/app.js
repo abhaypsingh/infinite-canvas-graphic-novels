@@ -178,6 +178,11 @@ class InfiniteCanvas {
     }
 
     getBrushBytePageData(pageNum) {
+        // Check if enhanced novel is available
+        if (window.enhancedNovel) {
+            return window.enhancedNovel.getEnhancedPage(pageNum);
+        }
+        
         const pages = {
             1: `
                 <div class="comic-page">
