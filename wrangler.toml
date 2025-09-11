@@ -1,0 +1,7 @@
+name = "infinite-canvas-graphic-novels"
+pages_build_output_dir = "./"
+compatibility_date = "2025-01-10"
+
+[site]
+bucket = "./"
+exclude = ["node_modules/", "*.md", ".git/", ".github/", "wrangler.toml", ".gitignore"]

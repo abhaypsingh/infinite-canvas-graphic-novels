@@ -956,5 +956,11 @@ const enhancedComplete = new EnhancedBrushByteComplete();
 
 if (typeof window !== 'undefined') {
     window.EnhancedBrushByteComplete = EnhancedBrushByteComplete;
-    window.enhancedNovel = enhancedComplete;
+    window.enhancedComplete = enhancedComplete;
+    
+    // Add pages 4-5 to the existing enhancedNovel object if it exists
+    if (window.enhancedNovel) {
+        window.enhancedNovel.generatePage4 = enhancedComplete.generatePage4.bind(enhancedComplete);
+        window.enhancedNovel.generatePage5 = enhancedComplete.generatePage5.bind(enhancedComplete);
+    }
 }
